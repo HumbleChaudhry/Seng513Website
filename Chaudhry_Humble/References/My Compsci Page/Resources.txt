@@ -1,0 +1,3 @@
+How I made the cards: https://www.youtube.com/watch?v=6-QoF1qY9Bw
+
+How I learnt about keyframes and used it for the opacity transitions: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes

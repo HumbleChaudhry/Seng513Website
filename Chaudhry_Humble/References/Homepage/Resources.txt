@@ -1,0 +1,9 @@
+How I made the homepage: https://www.youtube.com/watch?v=oYRda7UtuhA
+
+Making flex boxes: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+
+Hovering Web App button: https://www.youtube.com/watch?v=zPcvAwp71uA
+
+Cool keyframes main title animation: https://www.youtube.com/watch?v=Syg_9iB1vco
+
+How I learnt about keyframes and used it for the opacity transitions: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes

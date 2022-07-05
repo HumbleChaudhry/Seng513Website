@@ -1,0 +1,33 @@
+Check for an empty string: https://stackoverflow.com/questions/154059/how-can-i-check-for-an-empty-undefined-null-string-in-javascript
+
+How to use REGEX: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+Sorting array by length: https://reactgo.com/javascript-sort-array-by-length/
+
+Remove object from an array: https://stackoverflow.com/questions/10024866/remove-object-from-array-using-javascript?rq=1
+
+Finding longest string in array: https://stackoverflow.com/questions/6521245/finding-longest-string-in-array
+
+How to use match function: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match
+
+How to split with multiple separators: https://www.geeksforgeeks.org/javascript-split-a-string-with-multiple-separators/
+
+Separate integers and text in a string: https://stackoverflow.com/questions/3370263/separate-integers-and-text-in-a-string
+
+Check if character string is number: https://bobbyhadz.com/blog/javascript-check-if-character-in-string-is-number
+
+Using Slice: https://stackoverflow.com/questions/14236515/can-i-limit-the-length-of-an-array-in-javascript/49761236#49761236
+
+Removing duplicates: https://dev.to/soyleninjs/3-ways-to-remove-duplicates-in-an-array-in-javascript-259o
+
+Sorting array alphabetically: https://www.codegrepper.com/code-examples/javascript/javascript+sort+numbers+alphabetically
+
+How to use hashmaps: https://medium.com/@martin.crabtree/javascript-tracking-key-value-pairs-using-hashmaps-7de6df598257
+
+Sort map by value: https://stackoverflow.com/questions/37982476/how-to-sort-a-map-by-value-in-javascript
+
+Copy array by value: https://stackoverflow.com/questions/7486085/copy-array-by-value
+
+How to use concat(): https://www.w3schools.com/jsref/jsref_concat_array.asp
+
+Round Math Function: https://www.codingem.com/javascript-how-to-limit-decimal-places/

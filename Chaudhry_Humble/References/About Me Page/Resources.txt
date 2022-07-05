@@ -1,0 +1,10 @@
+I made the flex box with my contact info the same way as I did for the Home Page.
+
+Tables I created myself and the help of: https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+
+Fix table spacing: https://stackoverflow.com/questions/12585461/controlling-spacing-between-table-cells
+
+Making table invisible: https://www.sidmartinbio.org/how-do-you-make-a-table-cell-border-invisible-in-html/
+
+List inside table : https://www.sitepoint.com/community/t/list-items-in-table-cells-bad-practice/5245/3
+How I learnt about keyframes and used it for the opacity transitions: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes

@@ -1,0 +1,9 @@
+Animation delay: https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay
+
+How I learnt about keyframes and used it for the opacity transitions: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+
+Making a break div: https://tobiasahlin.com/blog/flexbox-break-to-new-row/
+
+Make a video unmuted and muted and as a background: https://youtu.be/8MgpE2DTTKA
+
+Same flex boxes as My Compsci page.

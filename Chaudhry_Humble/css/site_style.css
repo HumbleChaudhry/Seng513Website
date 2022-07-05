@@ -1,0 +1,1371 @@
+/*Initialize Webpage*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/*Set Background for all pages*/
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../images/Basketball\ Background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*Navigation Bar*/
+nav {
+  display: flex;
+  align-items: center;
+  padding: 2% 6%;
+  justify-content: space-between;
+  font-size: 30px;
+}
+
+/* Neat trick to set color for which nav li you are at */
+.active {
+  color: purple;
+}
+
+/* Set width of logo */
+.logo {
+  width: 150px;
+}
+
+/* Initialize nav settings */
+nav ul {
+  flex: 1;
+  text-align: right;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 15px;
+  padding: 8px 12px;
+  position: relative;
+}
+.menu li:hover a {
+  color: rgb(35, 97, 11);
+  transition: 1s;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Web App button */
+.btn {
+  border: 2px solid #fff;
+  padding: 6px 25px;
+  border-radius: 30px;
+  margin-left: 30px;
+  box-shadow: inset 0 0 0 0 #f9e506;
+  transition: ease-out 0.3s;
+  outline: none;
+}
+.btn:hover {
+  box-shadow: inset 165px 0 0 0 #f9e506;
+  color: rgb(35, 97, 11);
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 1179px) {
+  nav {
+    font-size: 2vw;
+  }
+  nav ul {
+    flex: 1;
+    text-align: center;
+  }
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+}
+@media (max-width: 836px) {
+  nav {
+    font-size: 1.7vw;
+  }
+  nav ul {
+    flex: 1;
+    text-align: center;
+  }
+  .logo {
+    width: 80px;
+    height: auto;
+  }
+}
+
+@media (max-width: 712px) {
+  nav {
+    font-size: 5vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10vw;
+  }
+  .logo {
+    width: 130px;
+    height: auto;
+  }
+  nav ul {
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  nav ul li {
+    display: flex;
+    list-style: none;
+    margin: 0 15px;
+    padding: 8px 12px;
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .btn {
+    margin: 0;
+  }
+}
+.kobetext {
+  color: #fff;
+}
+
+/* When hovering on logo on top, this is how you make a hover effect*/
+.logohover img:hover {
+  background-color: #050300;
+  opacity: 0.7 !important;
+}
+/**** HOME PAGE ****/
+
+/* Cool containers for keyframes animation effect */
+.container {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container span {
+  text-transform: uppercase;
+  display: block;
+}
+.text1 {
+  color: white;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  background: black;
+  position: relative;
+  animation: text 3s 1;
+}
+.text2 {
+  font-size: 45px;
+  color: #6ab04c;
+}
+
+/* Set keyframes for animation on start up */
+@keyframes text {
+  0% {
+    color: black;
+    margin-bottom: -50px;
+  }
+  30% {
+    letter-spacing: 13px;
+    margin-bottom: -50px;
+  }
+  85% {
+    letter-spacing: 8px;
+    margin-bottom: -50px;
+  }
+}
+
+/* Set margins for homepage contatiner section */
+.homepage {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.webappheader {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 20px;
+}
+
+/* Make a button to explore */
+.explorebtn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 30px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  animation-duration: 5s;
+  animation-name: fadein;
+}
+.explorebtn:hover {
+  border: 1px solid green;
+  background: #f9e506;
+  transition: 1s;
+  color: rgb(35, 97, 11);
+}
+
+/* More media queries */
+@media (max-width: 650px) {
+  .text1 {
+    font-size: 40px;
+  }
+  .text2 {
+    font-size: 25px;
+  }
+  nav ul li {
+    display: block;
+  }
+  .explorebtn {
+    font-size: 17px;
+  }
+}
+
+/* New keyframe for fading in content */
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Flex boxes */
+.mycomppic {
+  border-radius: 30px;
+}
+.kobepic {
+  border-radius: 30px;
+}
+.self {
+  max-width: 67%;
+}
+.webapp {
+  padding: 15px;
+  border-radius: 30px;
+  max-width: 95%;
+  height: auto;
+  align-items: center;
+}
+.row {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+.home-col {
+  flex-basis: 31%;
+  background: #cae0c7;
+
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.home-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.8);
+}
+
+/* Media queries */
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/*Add a see more button to every flex box */
+.seemorebtn {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 12px 34px;
+  font-size: 17px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+/* See more button hover effect */
+.seemorebtn:hover {
+  border: 1px solid green;
+  background: #f9e506;
+  transition: 1s;
+  color: rgb(35, 97, 11);
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/**** MY COMPSCI PAGE****/
+
+/* Title */
+.compsci-title {
+  color: #a3c99e;
+  font-size: 3vw;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: fadein 1s 1;
+}
+/* Subtitle */
+.compsci-subtitle {
+  color: white;
+  font-size: 2vw;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: fadein 2s 1;
+}
+
+/* Media queries */
+@media (max-width: 1178px) {
+  .compsci-title {
+    font-size: 40px;
+  }
+  .compsci-subtitle {
+    font-size: 30px;
+  }
+}
+@media (max-width: 650px) {
+  .compsci-title {
+    font-size: 40px;
+  }
+  .compsci-subtitle {
+    font-size: 30px;
+  }
+}
+/* Wrapper for flex boxes */
+.wrapper {
+  padding-top: 5vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadein 3s 1;
+}
+/* Flex box card */
+.card {
+  width: 600px;
+  height: 500px;
+  margin: 40px;
+  padding: 2rem 1rem;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 50px;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.8);
+  transition: 0.5s ease-in-out;
+}
+
+/* For hover animation*/
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 176, 155, 0.5), #d3c5d6);
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+  border-radius: 50px;
+}
+
+.card:hover:before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(20px);
+}
+
+/* Make image fit card */
+.card img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+}
+/* Align text on card */
+.card .info {
+  position: relative;
+  z-index: 3;
+  color: black;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;
+  font-weight: bolder;
+  display: block;
+  text-align: center;
+}
+
+.card:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.card .info h1 {
+  margin: 0;
+}
+
+.card .info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin: top 8px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: left;
+}
+
+.card .info .compscibtn {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.card .info .compscibtn:hover {
+  border: 1px solid green;
+  background-color: #f9e506;
+  transition: 1s;
+  color: rgb(35, 97, 11);
+}
+
+/**** KOBE BRYANT PAGE ****/
+
+/* Wrap Kobe cards */
+.kobewrapper {
+  padding-top: 5vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Same as mycompsci */
+.kobecard {
+  width: 800px;
+  height: 600px;
+  margin: 40px;
+  padding: 2rem 1rem;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.8);
+  transition: 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: fadein 2.5s 1;
+}
+
+.kobecard:hover:before {
+  opacity: 1;
+}
+
+.kobecard:hover {
+  transform: translateY(20px);
+}
+
+.kobecard img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  opacity: 0.5;
+  animation: kobefadeout 3.5s 1;
+}
+
+.kobecard:hover img {
+  opacity: 1;
+  transition: 1s all;
+}
+.kobecard .info {
+  opacity: 1;
+  transform: translateY(0px);
+  animation: kobefadein 3.5s 1;
+}
+
+.kobecard:hover .info {
+  position: relative;
+  z-index: 3;
+  color: black;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: 0.5s all;
+  font-weight: bolder;
+  display: block;
+  text-align: center;
+}
+
+.kobecard .info h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+.kobecard2 {
+  width: 800px;
+  height: 600px;
+  margin: 40px;
+  padding: 2rem 1rem;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.8);
+  transition: 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: fadein 3.5s 1;
+}
+
+.kobecard2:hover:before {
+  opacity: 1;
+}
+
+.kobecard2:hover {
+  transform: translateY(20px);
+}
+
+.kobecard2 img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  opacity: 0.5;
+  animation: kobefadeout 3.5s 1;
+  animation-delay: 0.85s;
+}
+
+.kobecard2:hover img {
+  opacity: 1;
+  transition: 1s all;
+}
+.kobecard2 .info {
+  opacity: 1;
+  transform: translateY(0px);
+  animation: kobefadein 3.5s 1;
+  animation-delay: 0.85s;
+}
+
+.kobecard2:hover .info {
+  position: relative;
+  z-index: 3;
+  color: black;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: 0.5s all;
+  font-weight: bolder;
+  display: block;
+  text-align: center;
+}
+
+.kobecard2 .info h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+.kobecard3 {
+  width: 800px;
+  height: 600px;
+  margin: 40px;
+  padding: 2rem 1rem;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.8);
+  transition: 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: fadein 4.35s 1;
+}
+
+.kobecard3:hover:before {
+  opacity: 1;
+}
+
+.kobecard3:hover {
+  transform: translateY(20px);
+}
+
+.kobecard3 img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  opacity: 0.5;
+  animation: kobefadeout 3.5s 1;
+  animation-delay: 1.7s;
+}
+
+.kobecard3:hover img {
+  opacity: 1;
+  transition: 1s all;
+}
+.kobecard3 .info {
+  opacity: 1;
+  transform: translateY(0px);
+  animation: kobefadein 3.5s 1;
+  animation-delay: 1.6s;
+}
+
+.kobecard3:hover .info {
+  position: relative;
+  z-index: 3;
+  color: black;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: 0.5s all;
+  font-weight: bolder;
+  display: block;
+  text-align: center;
+}
+
+.kobecard3 .info h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+.kobecard4 {
+  width: 300px;
+  height: 200px;
+  margin: 40px;
+  padding: 2rem 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+/* Keyframes animation effects for Kobe fadeins and outs */
+@keyframes kobefadeout {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.73;
+  }
+  60% {
+    opacity: 0.68;
+  }
+  70% {
+    opacity: 0.63;
+  }
+  80% {
+    opacity: 0.58;
+  }
+  90% {
+    opacity: 0.53;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes kobefadein {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Another explore button after Kobe cards */
+.explorebtn2 {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 85px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  animation-duration: 7s;
+  animation-name: fadein;
+}
+.explorebtn2:hover {
+  border: 1px solid green;
+  background: #f9e506;
+  transition: 1s;
+  color: rgb(35, 97, 11);
+}
+
+/* Kobe content section */
+.kobemain {
+  min-height: 2vh;
+  width: 100%;
+  background: cover;
+  background-image: url(../images/SnakeBackground.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  padding-top: 70px;
+}
+
+/* Media queries */
+@media (max-width: 2670px) {
+  .kobecard {
+    width: 600px;
+    height: 500px;
+  }
+  .kobecard .info h1 {
+    font-size: 81px;
+  }
+  .kobecard2 {
+    width: 600px;
+    height: 500px;
+  }
+  .kobecard2 .info h1 {
+    font-size: 81px;
+  }
+  .kobecard3 {
+    width: 600px;
+    height: 500px;
+  }
+  .kobecard3 .info h1 {
+    font-size: 81px;
+  }
+  .explorebtn2 {
+    font-size: 65px;
+  }
+}
+
+@media (max-width: 2060px) {
+  .kobecard {
+    width: 500px;
+    height: 400px;
+  }
+
+  .kobecard .info h1 {
+    font-size: 60px;
+  }
+  .kobecard2 {
+    width: 500px;
+    height: 400px;
+  }
+
+  .kobecard2 .info h1 {
+    font-size: 60px;
+  }
+  .kobecard3 {
+    width: 500px;
+    height: 400px;
+  }
+
+  .kobecard3 .info h1 {
+    font-size: 60px;
+  }
+  .explorebtn2 {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 700px) {
+  .explorebtn2 {
+    font-size: 25px;
+  }
+}
+
+/* For videos */
+video {
+  width: 60% !important;
+  height: auto !important;
+}
+/* For youtube videos */
+iframe {
+  width: 90%;
+  height: 12vw !important;
+}
+/* Images in career content */
+.career-col img {
+  width: 90%;
+  height: 12vw !important;
+}
+/* Row wrapper */
+.koberow {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+/* Making a div break */
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* Kobe pics on the side of video */
+.kobe8pic {
+  float: left;
+  width: 20%;
+  display: flex;
+}
+.kobe24pic {
+  float: right;
+  width: 20%;
+  display: flex;
+}
+/* Content headers */
+.kobemain h1 {
+  color: white;
+  font-size: 3vw;
+}
+.kobemain h2 {
+  color: gold;
+  font-size: 2.7vw;
+}
+
+.kobemain h3 {
+  color: white;
+  font-size: 1.5vw;
+}
+
+/* New Kobe wrapper for bio flex boxes */
+.kobewrapper2 {
+  padding-top: 5vh;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/* Set bio flex boxes */
+.biokobecard {
+  flex-basis: 18%;
+
+  height: 14vw;
+  margin: 1vw;
+
+  border: 0.2vw solid gold;
+  background: rgb(59, 1, 59);
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 1000px;
+  box-sizing: border-box;
+  box-shadow: 0px 7px 10px yellow;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.biokobecard .info {
+  position: relative;
+  z-index: 3;
+  transform: translateY(0px);
+  opacity: 1;
+  font-weight: bolder;
+  display: block;
+  text-align: center;
+}
+
+.biokobecard p {
+  color: gold;
+  font-size: 1vw;
+  text-align: center;
+}
+
+.biokobecard h1 {
+  font-size: 2vw;
+  color: White;
+  margin: 0;
+}
+
+.box1 {
+  font-size: 1.7vw;
+  color: White;
+  margin: 0;
+}
+.box2 {
+  color: gold;
+  font-size: 1vw;
+  text-align: center;
+  margin: 0;
+}
+
+.kobeafter {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.koberow2 {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accoladesAndStats {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 2vw;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.accoladesAndStats:hover {
+  border: 1px solid green;
+  background: #f9e506;
+  transition: 1s;
+  color: rgb(35, 97, 11);
+}
+
+.accolades-col {
+  flex-basis: 49%;
+  background: rgb(59, 1, 59);
+  border: 3px solid gold;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.accolades-col h1 {
+  font-size: 2vw;
+}
+.accolades-col h3 {
+  font-size: 1.5w;
+  color: gold;
+}
+.accolades-col p {
+  font-size: 1vw;
+  color: gold;
+  line-height: 26pt;
+}
+
+.career-col {
+  display: flex;
+  flex-basis: 24%;
+  background: rgb(59, 1, 59);
+  border: 3px solid gold;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+  align-items: center;
+}
+.career-col h1 {
+  font-size: 2vw;
+}
+
+.career-col h3 {
+  font-size: 1.5w;
+  color: gold;
+}
+.career-col p {
+  font-size: 1vw;
+  color: gold;
+  line-height: 26pt;
+}
+.after-col {
+  flex-basis: 32%;
+  background: rgb(59, 1, 59);
+  border: 3px solid gold;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.after-col h1 {
+  font-size: 2vw;
+}
+.after-col h3 {
+  font-size: 1.5w;
+  color: gold;
+}
+.after-col p {
+  font-size: 1vw;
+  color: gold;
+  line-height: 26pt;
+}
+.explorebtn3 {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 0.8vw;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.explorebtn3:hover {
+  border: 1px solid green;
+  background: #f9e506;
+  transition: 1s;
+  color: rgb(35, 97, 11);
+}
+/* Media queries */
+@media (max-width: 1148px) {
+  .kobewrapper2 {
+    flex-wrap: wrap;
+    flex-direction: column;
+    word-break: break-all;
+  }
+  .biokobecard {
+    width: 40%;
+
+    padding: 13.5vw 1.5vw;
+    margin-bottom: 5vw;
+  }
+  .box1 {
+    font-size: 4vw;
+  }
+  .box2 {
+    font-size: 3vw;
+  }
+
+  .kobeafter {
+    width: 90%;
+  }
+  .koberow2 {
+    flex-direction: column;
+  }
+  .kobemain h1 {
+    font-size: 5vw;
+  }
+  .kobemain h2 {
+    font-size: 6vw;
+  }
+
+  .kobemain h3 {
+    font-size: 3vw;
+  }
+  iframe {
+    width: 70%;
+    height: 40vw !important;
+  }
+
+  .accoladesAndStats {
+    font-size: 4vw;
+  }
+
+  .career-col img {
+    width: 70%;
+    height: 40vw !important;
+  }
+  .career-col h1 {
+    font-size: 4vw;
+  }
+  .career-col p {
+    font-size: 2vw;
+  }
+  .after-col h1 {
+    font-size: 4vw;
+  }
+
+  .after-col p {
+    font-size: 2vw;
+  }
+  .explorebtn3 {
+    font-size: 1.8vw;
+  }
+}
+
+/***** ABOUT ME PAGE ****/
+
+.aboutme h1 {
+  color: #a3c99e;
+  font-size: 3vw;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  animation: fadein 2s 1;
+}
+
+/* Similar flex boxes */
+.wrapperaboutme {
+  float: left;
+  display: flex;
+  animation: fadein 3s 1;
+  justify-content: center;
+}
+
+.aboutcard {
+  width: 50vh;
+  height: auto;
+  flex-basis: 80%;
+  margin-bottom: 5%;
+  padding: 20px 0px;
+  background-image: url(../images/greenbackground.png);
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.aboutcard .selfpic {
+  animation: fadein 3s 1;
+  width: 95%;
+}
+.aboutcard .email {
+  width: 10%;
+}
+.aboutcard h3 {
+  color: black;
+}
+
+.aboutcard h2 {
+  font-size: 35px;
+  color: black;
+}
+.aboutcard h1 {
+  font-size: 45px;
+  color: black;
+}
+
+/* Media queries */
+@media (max-width: 1566px) {
+  .wrapperaboutme {
+    float: none;
+  }
+
+  .aboutcard {
+    flex-basis: 41%;
+  }
+
+  .aboutme h1 {
+    font-size: 6vw;
+  }
+}
+
+/* Initialize invisible table */
+Table {
+  border-collapse: collapse;
+  margin: 0;
+  animation: fadein 4s 1;
+  table-layout: fixed;
+}
+/* Break word as screen shrinks */
+th,
+td {
+  word-wrap: break-word;
+}
+
+/* Set cell size */
+td {
+  padding: 10px 10px;
+  color: #d3c5d6;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Set cell widths accordin to screen size */
+table tr td:nth-child(1) {
+  width: 60vw;
+}
+table tr td:nth-child(2) {
+  width: 60vw;
+}
+table tr td:nth-child(3) {
+  width: 60vw;
+}
+
+.tabletitle {
+  font-size: 45px;
+  padding-bottom: 30vh;
+}
+
+/* For smaller text cells under the main ones */
+.smaller td {
+  padding: 10px 10px;
+  color: #d3c5d6;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Images for table */
+.uofclogo {
+  width: 35%;
+}
+.TAlogo {
+  width: 45%;
+}
+.SSlogo {
+  width: 75%;
+}
+.NBAlogo {
+  width: 35%;
+}
+.VGlogo {
+  width: 25%;
+}
+.Travellogo {
+  width: 25%;
+}
+
+/* Extra padding */
+.padded {
+  padding-top: 25vh;
+}
+/* Indent some bullets */
+.customindent {
+  text-align: left;
+}
+
+/* Media queries */
+@media (max-width: 1084px) {
+  .tabletitle {
+    font-size: 25px;
+  }
+
+  td {
+    font-size: 25px;
+  }
+
+  .smaller td {
+    font-size: 10px;
+  }
+}
